@@ -29,8 +29,9 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.nav-link ol li{
+.card ol li{
     padding-left: 20px;
+    text-align: left;
 }
 
 .link-btn {
