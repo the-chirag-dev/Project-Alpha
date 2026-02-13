@@ -1,51 +1,81 @@
 body {
-    background-color: #0f172a;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) ;
+    background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
-    margin: 0;
-    font-family: sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 .container {
-    background: #1e293b;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
+  width: 90%;
+  max-width: 450px;
+  min-height: 400px;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), /* Darkened shadow for better pop */
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 12px 6px rgba(255, 255, 255, 0.1); /* Reduced inner glow to keep text readable */
+position: relative;
+overflow: hidden;
+text-align: center;
+color: #ffffff;
 }
 
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg , transparent, rgba(255, 255, 255, 0.8), transparent );
+}
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 1.5px; height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent);
+}
+h1, h2, p {
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
 .nav-link ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
 }
 
 .nav-link ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.card ol li{
-    padding-left: 20px;
-    text-align: left;
+.card ol li {
+  padding-left: 20px;
+  text-align: left;
 }
 
 .link-btn {
-    display: block;
-    background: #38bdf8;
-    color: #0f172a;
-    padding: 10px;
-    margin: 10px 0;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s ease;
+  display: block;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .link-btn:hover {
-    background: #7dd3fc;
+  background: #7dd3fc;
 }
