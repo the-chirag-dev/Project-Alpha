@@ -30,6 +30,7 @@ position: relative;
 overflow: hidden;
 text-align: center;
 color: #ffffff;
+transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
 
 .container::before{
@@ -45,6 +46,13 @@ color: #ffffff;
     top: 0; left: 0; width: 1.5px; height: 100%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent);
 }
+
+.container:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 15px 45px rgba(0,0,0,0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.5);
+}
 h1, h2, p {
     color: white;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -59,9 +67,35 @@ h1, h2, p {
   margin-bottom: 0.5rem;
 }
 
+/* Monday's Data Styling */
 .card ol li {
-  padding-left: 20px;
-  text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between; /* Spreads Item and Amount apart */
+    transition: 0.3s;
+}
+
+.card ol li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 25px; /* Subtle slide effect */
+}
+
+.progress-bar-bg {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    height: 100%;
+    transition: width 1s ease-in-out;
 }
 
 .link-btn {
